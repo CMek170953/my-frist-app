@@ -7,7 +7,7 @@ discountPercentage = st.number_input("กรอกส่วนลด (%):", min_
 discount = price * discountPercentage // 100
 
 discounted = price - discount
-vat = price * 0.07
+vat = discounted * 0.07
 netPrice = price - discount + vat
 
 st.header(f"• ส่วนลด (**{discountPercentage}**%) : **{-discount:.2f}** บาท")
